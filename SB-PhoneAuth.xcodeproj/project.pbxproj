@@ -13,6 +13,8 @@
 		AD7FB3D92723C4FC007E7874 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AD7FB3D72723C4FC007E7874 /* Main.storyboard */; };
 		AD7FB3DB2723C4FF007E7874 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AD7FB3DA2723C4FF007E7874 /* Assets.xcassets */; };
 		AD7FB3DE2723C4FF007E7874 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AD7FB3DC2723C4FF007E7874 /* LaunchScreen.storyboard */; };
+		AD7FB3E72723C601007E7874 /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = AD7FB3E62723C601007E7874 /* FirebaseAuth */; };
+		AD7FB3E92723C7C2007E7874 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = AD7FB3E82723C7C2007E7874 /* GoogleService-Info.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +26,7 @@
 		AD7FB3DA2723C4FF007E7874 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		AD7FB3DD2723C4FF007E7874 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		AD7FB3DF2723C4FF007E7874 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AD7FB3E82723C7C2007E7874 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,6 +34,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AD7FB3E72723C601007E7874 /* FirebaseAuth in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -59,6 +63,7 @@
 				AD7FB3D12723C4FC007E7874 /* AppDelegate.swift */,
 				AD7FB3D32723C4FC007E7874 /* SceneDelegate.swift */,
 				AD7FB3D52723C4FC007E7874 /* ViewController.swift */,
+				AD7FB3E82723C7C2007E7874 /* GoogleService-Info.plist */,
 				AD7FB3D72723C4FC007E7874 /* Main.storyboard */,
 				AD7FB3DA2723C4FF007E7874 /* Assets.xcassets */,
 				AD7FB3DC2723C4FF007E7874 /* LaunchScreen.storyboard */,
@@ -83,6 +88,9 @@
 			dependencies = (
 			);
 			name = "SB-PhoneAuth";
+			packageProductDependencies = (
+				AD7FB3E62723C601007E7874 /* FirebaseAuth */,
+			);
 			productName = "SB-PhoneAuth";
 			productReference = AD7FB3CE2723C4FC007E7874 /* SB-PhoneAuth.app */;
 			productType = "com.apple.product-type.application";
@@ -111,6 +119,9 @@
 				Base,
 			);
 			mainGroup = AD7FB3C52723C4FC007E7874;
+			packageReferences = (
+				AD7FB3E52723C601007E7874 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+			);
 			productRefGroup = AD7FB3CF2723C4FC007E7874 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -126,6 +137,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				AD7FB3DE2723C4FF007E7874 /* LaunchScreen.storyboard in Resources */,
+				AD7FB3E92723C7C2007E7874 /* GoogleService-Info.plist in Resources */,
 				AD7FB3DB2723C4FF007E7874 /* Assets.xcassets in Resources */,
 				AD7FB3D92723C4FC007E7874 /* Main.storyboard in Resources */,
 			);
@@ -358,6 +370,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		AD7FB3E52723C601007E7874 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/firebase/firebase-ios-sdk.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 8.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		AD7FB3E62723C601007E7874 /* FirebaseAuth */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = AD7FB3E52723C601007E7874 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAuth;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = AD7FB3C62723C4FC007E7874 /* Project object */;
 }
